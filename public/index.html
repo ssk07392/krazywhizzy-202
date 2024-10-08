@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+  <style>
+    @font-face {
+      font-family: 'futurabold';
+      src: url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_bold_font-webfont.svg#futurabold') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'futurabold_italic';
+      src: url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_bold_italic_font-webfont.svg#futurabold_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'futurabook';
+      src: url('%PUBLIC_URL%/fonts/futura_book_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_book_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_book_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_book_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_book_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_book_font-webfont.svg#futurabook') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'futurabook_italic';
+      src: url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_book_italic_font-webfont.svg#futurabook_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'futuraextra_black';
+      src: url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_extra_black_font-webfont.svg#futuraextra_black') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'futuraheavy';
+      src: url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_font-webfont.svg#futuraheavy') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuraheavy_italic';
+      src: url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_heavy_italic_font-webfont.svg#futuraheavy_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuralight';
+      src: url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_light_bt-webfont.svg#futuralight') format('svg');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuraregular';
+      src: url('%PUBLIC_URL%/fonts/futura_light_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_light_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_light_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_light_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_light_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_light_font-webfont.svg#futuralight') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuralight_italic';
+      src: url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_light_italic_font-webfont.svg#futuralight_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuramedium';
+      src: url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_bt-webfont.svg#futuramedium') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuramedium';
+      src: url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_condensed_bt-webfont.svg#futuramedium') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuramedium_italic';
+      src: url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_medium_italic_font-webfont.svg#futuramedium_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futura_xblk_btextra_black';
+      src: url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura_xblk_bt-webfont.svg#futura_xblk_btextra_black') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuralight_condensed';
+      src: url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/futura-condensedlight-webfont.svg#futuralight_condensed') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futuraextra_black_italic';
+      src: url('%PUBLIC_URL%/fonts/tt0205m_-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/tt0205m_-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/tt0205m_-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/tt0205m_-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/tt0205m_-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/tt0205m_-webfont.svg#futuraextra_black_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futurabold';
+      src: url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/unicode.futurab-webfont.svg#futurabold') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'futura-blackbold';
+      src: url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/unicode.futurabb-webfont.svg#futura-blackbold') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitregular';
+      src: url('%PUBLIC_URL%/fonts/larsseit-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-webfont.svg#larsseitregular') format('svg');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitbold';
+      src: url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-bold-webfont.svg#larsseitbold') format('svg');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseit_boldbold_italic';
+      src: url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-bolditalic-webfont.svg#larsseit_boldbold_italic') format('svg');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitextrabold';
+      src: url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabold-webfont.svg#larsseitextrabold') format('svg');
+      font-weight: normal;
+      font-style: 800;
+    }
+    @font-face {
+      font-family: 'larsseitextrabold_italic';
+      src: url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-extrabolditalic-webfont.svg#larsseitextrabold_italic') format('svg');
+      font-weight: 800;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitregular';
+      src: url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-italic-webfont.svg#larsseitregular') format('svg');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitlight';
+      src: url('%PUBLIC_URL%/fonts/larsseit-light-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-light-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-light-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-light-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-light-webfont.svg#larsseitlight') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitlight_italic';
+      src: url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-lightitalic-webfont.svg#larsseitlight_italic') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitmedium';
+      src: url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-medium-webfont.svg#larsseitmedium') format('svg');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitmedium_italic';
+      src: url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-mediumitalic-webfont.svg#larsseitmedium_italic') format('svg');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitthin';
+      src: url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-thin-webfont.svg#larsseitthin') format('svg');
+      font-weight: 200;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'larsseitthin_italic';
+      src: url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.eot');
+      src: url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.woff') format('woff'),
+        url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.ttf') format('truetype'),
+        url('%PUBLIC_URL%/fonts/larsseit-thinitalic-webfont.svg#larsseitthin_italic') format('svg');
+      font-weight: 200;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

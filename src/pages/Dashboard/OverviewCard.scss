@@ -1,0 +1,44 @@
+@import '../../scss/flex';
+
+.overview-card {
+  background: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  max-width: 236px;
+  max-height: 236px;
+  width: 100%;
+  height: 236px;
+  padding: 26px;
+  .card-inner { width: 100%; }
+  @extend .d-flex-center-start;
+  .card-heading {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #121212;
+    font-family: 'futuralight';
+    margin-bottom: 8px;
+  }
+  .card-icon {
+    background: rgba(18, 18, 18, 0.06);
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    @extend .d-flex-center-center;
+  }
+  .card-view {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: #121212;
+    font-family: 'larsseitbold';
+  }
+  &:hover {
+    @include prefix(background, linear-gradient(127.4deg, #FF8300 -15.18%, #000000 63.09%));
+    .card-view { color: $white; }
+    .card-heading { color: $white; }
+    .card-icon, .graph-icon { background: rgba($color: $white, $alpha: 0.2);
+      svg { fill: $white; }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2fae8160-caab-4195-9e8f-c62324b02e24" name="production-react">
+        <fileTransfer rootFolder="/home/ec2-user/admin/frontend" accessType="SFTP" host="54.179.236.235" port="22" sshConfigId="fe71cf24-f70d-4fda-8536-d991baa63c16" sshConfig="ec2-user@54.179.236.235:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="798f5f74-775a-45a1-95da-f709a8c32d38" name="production-uae">
+        <fileTransfer rootFolder="/home/ec2-user/admin/frontend" accessType="SFTP" host="3.29.23.200" port="22" sshConfigId="b81412fe-4034-40a4-a5a5-1c7aac4ac2da" sshConfig="ec2-user@3.29.23.200:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

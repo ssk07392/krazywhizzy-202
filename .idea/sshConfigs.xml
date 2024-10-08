@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="54.179.236.235" id="fe71cf24-f70d-4fda-8536-d991baa63c16" keyPath="C:\Users\shubham\Desktop\CrazyFox\krazywhizzy-sg.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+      <sshConfig host="3.29.23.200" id="b81412fe-4034-40a4-a5a5-1c7aac4ac2da" keyPath="C:\Users\shubham\Desktop\CrazyFox\krazywhizzy-uae.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+    </configs>
+  </component>
+</project>
